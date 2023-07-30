@@ -1,0 +1,48 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.footer {
+  .container {
+    @include flex-column;
+    max-width: 684px;
+  }
+  background-color: black;
+  text-align: center;
+  &__title {
+    padding: 66px 0 22px;
+    color: $footer-title;
+  }
+  &__description {
+    line-height: 28px;
+    color: $footer-text;
+    @media only screen and (max-width: 320px) {
+      span{
+        display: none;
+      }
+      font-size: 12px;
+      line-height: 20px;
+  }
+  }
+  &__icons {
+    padding: 35px 0;
+    @media only screen and (max-width: 768px) {
+      padding: 25px 0;
+  }
+  }
+  &__contacts {
+    padding-bottom: 70px;
+    color: $footer-text;
+    @media only screen and (max-width: 768px) {
+      padding-bottom: 55px;  
+  }
+    @media only screen and (max-width: 435px) {
+      @include flex-column
+   }
+    @media only screen and (max-width: 320px) {
+        font-size: 14px;
+        line-height: 24px;
+        padding-bottom: 47px;   
+    }
+    
+  }
+}

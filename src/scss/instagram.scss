@@ -1,0 +1,70 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.instagram {
+    @media only screen and (max-width: 1170px) {
+        img{
+         max-width: 100%;
+        }
+    }
+  padding-top: 47px;
+  z-index: 3;
+  background-color: rgb(0, 0, 0, 0.03);
+  @media only screen and (max-width: 320px) {
+    background-color: white;
+}
+  &__header {
+    @include flex-sb;
+    padding-bottom: 24px;
+    @media only screen and (max-width: 320px) {
+        padding-bottom: 13px;
+    }
+    &_title{
+        @media only screen and (max-width: 610px) {
+            span{
+            display: none;
+            }
+        }
+    }
+    &_link {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 22px;
+      @media only screen and (max-width: 610px) {
+            display: none;
+        }
+    }
+  }
+  &__body {
+    @include flex-sb;
+    gap: 10px;
+    padding-bottom: 50px;
+    @media only screen and (max-width: 610px) {
+        :nth-child(2){
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        :nth-child(3){
+            display: none;
+        }
+        }
+    @media only screen and (max-width: 1169px) {
+        :nth-child(4){
+            display: none;
+        }
+        }
+    @media only screen and (max-width: 320px) {
+            :nth-child(1){
+                display: block;
+            }
+            padding-bottom: 42px;
+            }
+        
+  }
+  &__card{
+        @media only screen and (max-width: 320px) {
+        display: none;
+      }
+  }
+}

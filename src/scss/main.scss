@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import "reset.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "header.scss";
+@import "recent_posts.scss";
+@import "instagram.scss";
+@import "footer.scss";
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $text-color;
+    a {
+        color: $text-color;
+        text-decoration: none;
+    }
+    h2{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    }
+    @media only screen and (max-width: 320px) {
+        h2{
+            font-size: 14px;
+        }
+    }
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
